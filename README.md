@@ -1,4 +1,10 @@
 # phase1wk1codchallenge
+
+Author:Michael Owiti
+contact:michael.owiti@student.moringaschool.com
+
+##Description
+
 Challenge 1: Student Grade Generator.
 
 Write code  that prompts the user to input student marks. The input should be between 0 and 100. Then output the correct grade: 
