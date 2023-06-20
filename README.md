@@ -1,9 +1,8 @@
 # phase1wk1codchallenge
 
-Author:Michael Owiti
-contact:michael.owiti@student.moringaschool.com
 
-##Description
+
+# Description
 
 Challenge 1: Student Grade Generator.
 
@@ -25,3 +24,15 @@ NB: Use KRA, NHIF, and NSSF values provided in the link below.
 https://www.aren.co.ke/payroll/taxrates.htmLinks to an external site.  
 
 https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/payeLinks to an external site.
+
+# project setup
+
+1. Creeate a repository on your GitHub account.
+2. Use Javascript to wire down the solution.
+3. Push the solution to the above repository once done.
+4. Submit the repository link for grading.
+5. Ensure your repository has a well written README.
+
+
+Author:Michael Owiti
+contact:michael.owiti@student.moringaschool.com

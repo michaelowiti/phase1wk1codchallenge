@@ -2,8 +2,6 @@ const taxthresh = 24000;
 const taxGroup1 = 0.1;
 const taxGroup2 = 0.15;
 const taxGroup3 = 0.2;
-
-const nhifRate = 0.02;
 const nssfRate = 0.06;
 //for this challenge functions were created to calculate necessary inputs and
 //also calculatable deductables e.g payee. if else conditions ensures that it correctly loops through
@@ -23,8 +21,32 @@ function calcPaye(basicSalary) {
   }
 }
 
-function calcNhif(basicSalary) {
-  return basicSalary * nhifRate;
+function calcNhif(gross) {
+  
+  if (gross <= 5999){
+    return nhifRate =  150}
+else if (gross <= 7999){
+    return nhifRate =  300}
+else if (gross <= 11999){
+    return nhifRate = 500}
+else if (gross <= 14999){
+    return nhifRate = 600}
+else if(gross <= 19999){
+    return nhifRate =  750}
+else if( gross<= 24999){
+    return nhifRate =  850}
+else if (gross <= 29999){
+    return nhifRate = 1000}
+else if( gross <= 34999){
+    return nhifRate =  1100}
+else if(gross <= 39999){
+    return nhifRate = 1200}
+else  if(gross <= 44999){
+    return nhifRate =1300}
+else if( gross <= 49999){
+    return nhifRate = 1400}
+else{
+   return nhifRate = 1500}
 }
 
 function calcNssf(basicSalary) {
@@ -34,15 +56,23 @@ function calcNssf(basicSalary) {
 function grossSalary(basicSalary, benefits) {
   return basicSalary + benefits;
 }
-function netSalary(basicSalary, benefit) {
+function netSalary(basicSalary, benefits) {
   const paye = calcPaye(basicSalary);
-  const gross = grossSalary(basicSalary, benefit);
+  const gross = grossSalary(basicSalary, benefits);
   const nssf = calcNssf(basicSalary);
-  const nhif = calcNhif(basicSalary);
-  const netSalo = gross - paye - nhif - nssf;
+  const nhif = calcNhif(gross);
+  const netSalo = gross - (paye + nhif + nssf);
   return netSalo;
 }
 const benefits = parseFloat(prompt(`enter your benefits`));
 const basicSalary = parseFloat(prompt(`enter your basicsalary`));
-const netSalo = netSalary(basicSalary, benefits)
+const netSalo = netSalary(basicSalary, benefits);
+const gross=grossSalary(basicSalary, benefits);
+const nssf = calcNssf(basicSalary);
+const paye = calcPaye(basicSalary);
+const nhif= calcNhif(gross);
 alert("Net Salary:" + netSalo);
+alert("Gross Salary:"+ gross);
+alert("nssf:"+nssf)
+alert("paye:"+ paye)
+alert("nhif:"+ nhif)

@@ -27,11 +27,3 @@ function getGrade(){
     }
 
     getGrade();
-
-
-   
-
-
-
-
-
